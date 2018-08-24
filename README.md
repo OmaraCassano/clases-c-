@@ -1,5 +1,7 @@
 # clases-c-
 link github del profe: https://github.com/utec-cs1100/cpp
+https://www.greenteapress.com/thinkcpp/thinkCScpp.pdf 
+
 
 #include <iostream>
 #include <cmath>  //de radianes a sexagesimales, el valor de pi en cmath es M_PI
