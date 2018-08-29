@@ -85,4 +85,25 @@ int main()
 
     cout << c << ' '<< b <<' '<< r << '\n';
 }
+-----------------------------------------------------------------------------------
+#include <iostream>                 repetir letra por cada nro
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int nro,i = 0;
+    string letra;
+    cin >> nro >> letra;
+
+    do
+    {
+        cout << letra << '\n';
+        i++;
+    }
+    while ( i < nro );
+
+}
+
 
