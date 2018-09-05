@@ -4,8 +4,10 @@ https://www.greenteapress.com/thinkcpp/thinkCScpp.pdf
 www.rankred.com/useful-c-cheat-sheets/ 
 ----------------------------------------------------------------------------
 
+Ejercicio: de radianes a sexagesimales
+
 #include <iostream>
-#include <cmath>  //de radianes a sexagesimales, el valor de pi en cmath es M_PI
+#include <cmath>  //el valor de pi en cmath es M_PI
 
 using namespace std;
 
@@ -16,6 +18,7 @@ int main()
     cout << (a*180)/M_PI;
 }
 --------------------------------------------------------------------------------
+
 #include <iostream>
 #include <cmath>  //tai loy
 
@@ -34,9 +37,12 @@ int main()
    cout << a<<'\n'<<b<<'\n'<<c<<'\n'<<resto;
 
 }
-
 ---------------------------------------------------------------------------------
-hallar distancia entre dos puntos
+miercoles 29 de agosto 2018
+---------------------------------------------------------------------------------
+
+Ejercicio: hallar distancia entre dos puntos
+
 #include <iostream>
 #include <cmath>
 
@@ -62,7 +68,8 @@ int main()
 }
 
 -----------------------------------------------------------------------------------
-sumar dos angulos sexagesimales (2do lab ejercicio2)
+
+Ejercicio: sumar dos angulos sexagesimales (2do lab ejercicio2)
 
 #include <cmath>
 
@@ -85,8 +92,12 @@ int main()
 
     cout << c << ' '<< b <<' '<< r << '\n';
 }
+
 -----------------------------------------------------------------------------------
-#include <iostream>                 repetir letra por cada nro
+
+Ejercicio: repetir letra por cada nro
+
+#include <iostream>                 
 #include <cmath>
 
 using namespace std;
@@ -106,4 +117,66 @@ int main()
 
 }
 
+-------------------------------------------------------------------------------------
+miercoles 05 de septiembre 2018
+-------------------------------------------------------------------------------------
 
+Ejercicio: 1,2,3,4 otño, ....
+
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int n;
+  cin >> n;
+  
+  if (1<= n <=4)
+  {
+    switch (n)
+    {
+      case 1 : cout << "Otoño"<< endl;
+                    break;
+      case 2 : cout << "Invierno"<< endl;
+                    break;
+      case 3 : cout << "Primavera"<< endl;
+                    break;
+      case 4 : cout << "Verano"<< endl;
+      
+    }
+  }
+}
+
+----------------------------------------------------------------------------------------
+
+Ejercicio: un programa que lea nros hasta 0
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int cn=0, cp=0, cimp=0;
+  int x = -1;
+  while (x!=0)
+  {
+      cout << "Ingrese un nro: "<< endl;
+      cin >> x;
+      if (x!=0)
+      {
+          cn++;
+          if (x%2==0)
+          {
+             cp++;
+          }
+          else
+          {
+             cimp++;
+          }
+      }
+      
+      cout << "cn: "<< cn << "cp: "<< cp << "cimp: "<< cimp << endl;
+  }
+}  
+  
+  
+  
