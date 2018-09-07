@@ -150,10 +150,11 @@ int main()
 ----------------------------------------------------------------------------------------
 
 Ejercicio: un programa que lea nros hasta 0
+
 #include <iostream>
 using namespace std;
 
-int main() 
+int main()
 {
   int cn=0, cp=0, cimp=0;
   int x = -1;
@@ -177,6 +178,111 @@ int main()
       cout << "cn: "<< cn << "cp: "<< cp << "cimp: "<< cimp << endl;
   }
 }  
-  
-  
-  
+
+------------------------------------------------------------------------------------
+viernes 7 de agosto 2018
+------------------------------------------------------------------------------------
+ ejercicio: sumar del 1 al 100
+ 
+ #include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int i = 0;
+    int s = 0;
+    for(i=1;i<=100;i++)
+    {
+        s+=i;
+    }
+    cout<<s<<endl;
+}
+
+---------------------------------------------------------------------------------------
+ 
+ejercicio : suma de cuadrados con nros de inicio y fin
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int a,b;
+    cin >> a >> b;
+
+    if (a % 2 !=0)
+        a++;
+    if (b % 2 !=0)
+        b--;
+    int s = 0;
+    while (a<=b){
+        s = s + pow(a,2);
+        a+=2;
+    }
+    cout << s <<;
+}
+
+-----------------------------------------------------------------------------------------
+
+ejercicio: Sumatoria de factoriales desde 1 hasta un número ingresado por el teclado entre 1 y 15. Usando do while.
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int x;
+    cin >> x;
+    int s = 0;
+    int n = 1;
+    do {
+        auto producto = 1;
+        for (int i = 1; i <= n; i++)
+            producto = producto * i;
+        s += producto;
+        producto = 1;
+        n++;
+    } while (n <= x);
+    cout << "suma de factoriales:" << s;
+
+}
+
+----------------------------------------------------------------------------------------------
+
+ejercicio: contador de nros, pares e impares hasta que se introduzca 0.
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int x = 1;
+    int cn = 0, cp=0, cimp=0;   //contador nros pares e impares.
+
+    while (x !=0)
+    {
+      cin >> x;
+      if (x!=0)
+      {
+          cn++;
+          if (x % 2 == 0)
+              cp++;
+          else if (x % 2 != 0)
+              cimp++;
+      }
+    }
+    cout << "nro total leídos :" <<cn<<endl;
+    cout << "nros pares :" << cp<<endl;
+    cout << "nros impares :" <<cimp<<endl ;
+
+}
+
+
