@@ -284,5 +284,40 @@ int main()
     cout << "nros impares :" <<cimp<<endl ;
 
 }
+------------------------------------------------------------------------------------------
+FALTA TERMINAR !!!!!!!!!!!
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int palm=0, caprob=0, cjalados=0, total=0;
+    int n1, n2, n3 ,n4 , n5 ;
+    int n;
+
+    cin >>n;
+    int i = 1;
+    
+    while (i++<=n)
+    {
+        cout<< "Ingrese notas del alumno(a)" << i <<endl;
+        cin>>n1>>n2>>n3>>n4>>n5;
+        palm = (n1+n2+n3+n4+n5)/5;
+        if (palm>10.5)
+            caprob++;
+        else
+            cjalados++;
+        total += palm;
+
+    }
+    int promtotal= total/n;
+    cout << 
+}
+
+-----------------------------------------------------------------------------------------------
+
 
 
