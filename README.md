@@ -2,6 +2,7 @@
 link github del profe: https://github.com/utec-cs1100/cpp
 https://www.greenteapress.com/thinkcpp/thinkCScpp.pdf 
 www.rankred.com/useful-c-cheat-sheets/ 
+Temas hasta el primer hackerrank : bucles y funciones
 ----------------------------------------------------------------------------
 
 Ejercicio: de radianes a sexagesimales
@@ -376,9 +377,9 @@ int main()
     printf("resultado = %d ", resultado);
 }
 -------------------------------------------------------------------------------------------------
-viernes 14 de septiembre 2018 
+viernes 14 de septiembre 2018  Día del repaso para el hackerrank
 -------------------------------------------------------------------------------------------------
-02 lab sesion 2 ejercicios de bucles 1
+ejercicios de bucles 1 (02 lab sesion 2) 
 #include <iostream>   
 
 using namespace std;
@@ -398,4 +399,42 @@ int main()
     cout << s << endl;
 }
 ---------------------------------------------------------------------------------------------------
+ejercicios de bucles 3:la mayor potencia de 2 menor o igual a N (02 lab sesion 2 )
 
+#include <iostream>  
+#include <cmath>
+
+using namespace std;
+
+int main ()
+{
+    int N;
+    cin >>N;
+    int potencia = 2;
+    while (potencia <= N)
+    {
+        potencia *=2 ;
+    }
+   cout<<potencia/2<<endl;
+}
+
+ ----------------------------------------------------------------------------------------------------
+otra forma de hacer el de mayor potencia con for
+
+#include <iostream> 
+using namespace std;
+
+int main ()
+{
+    int N;
+    cin >>N;
+    int potencia = 2;
+    for (int i = 1; potencia<N;i++)
+    {
+        potencia *=2 ;
+    }
+   
+   cout<<potencia/2<<endl;
+}
+contest de hoy
+https://www.hackerrank.com/contests/sp0-poo1/challenges
