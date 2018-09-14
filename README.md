@@ -376,7 +376,26 @@ int main()
     printf("resultado = %d ", resultado);
 }
 -------------------------------------------------------------------------------------------------
-viernes 14 de septiembre 2018 hackerrank 
+viernes 14 de septiembre 2018 
 -------------------------------------------------------------------------------------------------
+02 lab sesion 2 ejercicios de bucles 1
+#include <iostream>   
 
+using namespace std;
+
+int main()
+{
+    int N, s =0;
+    cin >> N;
+9
+    for (int i=1; i<=N; i++)
+    {
+        if (i%2==0)
+        {
+          s+=i;
+        }
+    }
+    cout << s << endl;
+}
+---------------------------------------------------------------------------------------------------
 
