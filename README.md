@@ -318,6 +318,65 @@ int main()
 }
 
 -----------------------------------------------------------------------------------------------
+Ejercicio de piramides (03 lab sesion 1)
 
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i, n, valor;
+
+    cout << "introduzca valor  :" << endl;
+    cin >> valor;
+    cout << endl;
+
+    if (valor > 1, valor < 21)
+    {
+        for (i = 1; i <= valor; i++)
+        {
+            for (n = 1; i >= n; n++)
+                cout << "*";
+            cout << "\n";
+        }
+     }
+}
+
+------------------------------------------------------------------------------------------------
+Ejercicio : convertir nro de cualquier base a base 10 (03 lab sesion 1)
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int numero; //a convertir
+    int base; //base en que estaexpresado
+    int resultado; //ovbio
+    int resto; //resto de division
+    int potencia; // valor por el que se multiplica cada cifra
+            printf("numero y base?");
+    scanf("%d", &numero);
+    scanf("%d", &base);
+    //compruebo que está entre 2 y 10
+    if (base < 2 , base > 10){
+        printf("BASE INCORRECTA");
+        exit(0);
+    }
+    potencia = 1;
+    resultado = 0;
+    do{
+        resto = numero %10;
+        numero = numero / 10;
+        resultado = resultado + (resto * potencia);
+        potencia = potencia * base;
+    } while (numero =! 0);
+    printf("resultado = %d ", resultado);
+}
+-------------------------------------------------------------------------------------------------
+viernes 14 de septiembre 2018 hackerrank 
+-------------------------------------------------------------------------------------------------
 
 
