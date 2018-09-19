@@ -438,3 +438,28 @@ int main ()
 }
 contest de hoy
 https://www.hackerrank.com/contests/sp0-poo1/challenges
+--------------------------------------------------------------------------------------------------------
+#include <iostream>
+
+using namespace std;
+
+int sumaDigitos(int Num) {
+    int Suma = 0, Resto;
+
+    while (Num != 0) {
+        Resto = (Num % 10);
+        Suma = (Suma + Resto);
+        Num = (Num / 10);
+    }
+    return (Suma);
+}
+int main()
+{
+    int N, s, r;
+    cin>>N;
+
+    if (N>1)
+    {
+        cout<<sumaDigitos(N);
+    }
+}
