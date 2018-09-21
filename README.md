@@ -463,6 +463,8 @@ int main()
         cout<<sumaDigitos(N);
     }
 }
+------------------------------------------------------------------------------------------------------------
+cambiar a otro repositroio
 --------------------------------------------------------------------------------------------------------------------
 #include <iostream>       21 septiembre viernes
 #include <cmath>
@@ -476,6 +478,51 @@ int main(){
          i *=2;
       }
 cout<<i<<endl;
+}
+----------------------------------------------------------------------------------------------------
+// programa principal 
+#include <iostream>
+#include <string>
+
+int potencia(int x)
+{ 
+    int i=2;
+    while(i<=x/2){
+         i *=2;
+      }
+    return i;
+}
+
+int sumaimpares(int x){
+      int suma =0;
+      for (int i =0; i<=x; i++)
+      {
+          if(i%2!=0)
+          {
+            suma = suma + i;    
+          }
+      }
+    return suma;
+}
+
+int inverso(int x)
+{ 
+    int inv=1;
+    for(int i=0 ; i<=x; i++)
+    {
+       inv *=i;        
+    }
+    return 1/inv;
+}
+
+int main()
+{
+  int N;
+  cin>>N;
+  cout<<potencia(N)<<'\n';
+  cout<<sumaimpares(N)<<'\n';
+  cout<<inverso(N)<<'\n';
+  
 }
 
 
