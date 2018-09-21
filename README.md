@@ -463,3 +463,20 @@ int main()
         cout<<sumaDigitos(N);
     }
 }
+--------------------------------------------------------------------------------------------------------------------
+#include <iostream>       21 septiembre viernes
+#include <cmath>
+using namespace std;   //potencia
+
+int main(){
+      int i =2;
+      int n;
+      cin >> n ;
+      while(i<=n/2){
+         i *=2;
+      }
+cout<<i<<endl;
+}
+
+
+
