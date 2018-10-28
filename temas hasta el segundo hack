@@ -1,0 +1,365 @@
+# c++ 2       SEGUNDO HACKERRANK
+miercoles 26 septiembre, 2018 arrays
+https://repl.it/@jorgeluisluis3
+https://github.com/utec-cs1100/cpp-2
+-------------------------------------
+// Example program
+#include <iostream>
+#include <string>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+  int n;
+  cin>>n;
+  int arrInt[n];
+  
+  srand(time(nullptr));
+  
+  
+  for (int i = 0; i<n ; i++)
+     arrInt[i] = rand()%100;
+     
+  for (int j = 0; j<n ; j++)
+     cout<<"j["<<j<<"]="<<arrInt[j]<<endl;
+}
+----------------------------------------------- 
+viernes 28 de septiembre, 2018 arrays de arrays
+-----------------------------------------------
+04 Arrays - Lab Sesion 1 ejercicio (pag 14) 
+ejercicio: 7a. Dado un array de N elementos con números aleatorios encontrar la suma de sus elementos par.
+#include <iostream>     
+#include <ctime>
+
+using namespace std;
+void ValoresAleatorios(int a[], int n);
+int sumarrays(int a[], int n );
+void imprimearrays(int a[], int n);
+
+int main() 
+{
+    int n;
+    cout << "ingrese n:";
+    cin >> n;
+    int arrInt[n];
+    ValoresAleatorios(arrInt, n);
+    imprimearrays(arrInt, n);
+    cout<<"La suma de numeros aleatorios pares son: "<< sumarrays(arrInt,n);
+}
+
+void ValoresAleatorios(int a[], int n) {
+    srand(time(nullptr));
+    for (int i=0; i<n;i++)
+        a[i] = rand()%100;
+} 
+int sumarrays(int a[], int n )
+{
+    int s=0, i;
+    for (i=0; i <n; i++)
+       if ( a[i]%2==0)
+            s +=a[i];
+    return s;        
+}
+
+void imprimearrays(int a[], int n)
+{ 
+     for (int i=0; i<n; i++)
+    cout << "arr[" << i << "] =" << a[i] << "\n"; 
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------
+Ejercicio: 7b. Dado un array de N elementos con números aleatorios encontrar la suma de las posiciones impares.
+
+#include <iostream>      
+#include <ctime>
+
+using namespace std;
+void ValoresAleatorios(int a[], int n);
+int sumapares(int a[], int n );
+int sumaimpares(int a[], int n);
+
+int main() 
+{
+    int n;
+    cout << "ingrese n:";
+    cin >> n;
+    int arrInt[n];
+    ValoresAleatorios(arrInt, n);
+    cout<<"La suma de posiciones impares son: "<< sumaimpares(arrInt,n);
+}
+
+void ValoresAleatorios(int a[], int n) {
+    srand(time(nullptr));
+    for (int i=0; i<n;i++)
+        a[i] = rand()%100;
+}
+int sumapares(int a[], int n )
+{
+    int s = 0;
+     for (int i = 0; i< n; i++)
+        if(a[i]%2==0)
+            s +=a[i];
+    return s;        
+}
+
+
+int sumaimpares(int a[], int n)
+{
+    int s = 0;
+     for (int i = 0; i<n; i+=2)
+        s +=a[i];
+    return s;
+}
+----------------------------------------------------------------------------------------------------
+Ejercicios teoría 05 ejemplo c arrays de dos dimensiones
+
+#include <iostream>     
+#include <ctime>
+
+using namespace std;
+
+
+int main() 
+{
+    int row = 3, col =4;
+    
+    int a2d[row][col];
+    
+    for( int i = 0; i< row; i++)
+    {
+       for (int j =0; j<col; j++)
+       {
+           a2d[i][j] = i*col+j;
+           cout<<  a2d[i][j] << "  ";
+        }
+        cout<< '\n'; 
+    }
+}    
+
+
+https://github.com/utec-cs1100/cpp-2/blob/master/arr2.cpp
+------------------------------------------------------------------------------------------
+temas para hackerrank de funciones, arrays de 1 dimensión, matrices 2 dimensiones.
+
+-------------------------------------------------------------------------------------------
+
+https://www.hackerrank.com/challenges/diagonal-difference/problem
+problema diagonal
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+int main() {
+    int n,ar[102][102],d1 = 0,d2 = 0;
+    cin >> n;
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            cin >> ar[i][j];
+            if(i==j)d1+=ar[i][j];
+            if(i+j==n-1)d2+=ar[i][j];
+        }
+    }
+    cout << abs(d1-d2) << endl;
+    return 0;
+}
+------------------------------------------------------------------------
+// Example program mismo problema pero planteado por el profesor
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+  int n;
+  //int val
+  cin>>n;
+  
+  int matriz[n][n];
+  for (int i = 0; i<n;i++)
+  {
+      for (int j = 0; j<n; j++)
+      {
+          cin >> matriz[i][j];
+      
+      }
+     
+  }
+   for (int i = 0; i<n;i++)   
+  {
+      for (int j = 0; j<n; j++)
+      {
+          cout << matriz[i][j] <<"   ";
+      
+      }
+      cout << "\n";
+  }
+  int x;
+  cin >> x;
+  cout << "abs:" << abs(x);
+}
+https://repl.it/@jorgeluisluis3/LooseDirtyCodewarrior
+
+--------------------------------------------------------------------------------------------------
+viernes 5 de octubre, 2018 lab 5 (arrays de arrays, sesión 1)
+--------------------------------------------------------------------------------------------------
+ejemplo:suma de filas
+
+#include <iostream>  
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    int n;
+
+    cin >> n;
+
+    int arrInt[n][n];
+
+    srand(time(nullptr));
+
+    for (int i=0; i<n; i++) 
+    {
+        for (int j = 0; j < n; j++) 
+        {
+            arrInt[i][j] = rand() % 4;
+        }
+    }
+
+    for (int i=0; i<n; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << setw(5) << arrInt[i][j] << " ";
+        }
+        cout << "\n";
+    }
+    
+    // suma de filas
+    int sumas[n];
+    for (int i=0; i<n; i++){
+      int suma = 0;
+      for (int j=0; j<n; j++)
+        suma += arrInt[i][j]; 
+      sumas[i] = suma;
+    }
+    cout << "las sumas de la filas es: ";
+    for (int i=0; i<n; i++)
+        cout << "fila(" << i << "): " << sumas[i] << " ";
+
+    return 0;
+}
+
+
+
+---------------------------------------------------------------------------------------------------
+cambio de columna: 
+https://github.com/utec-cs1100/cpp-2/blob/master/cambiocol.cpp
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    
+int n;
+    cout << "ingrese el tamanio de la matriz:";
+    cin >> n;
+
+    int arrInt[n][100];
+
+    srand(time(nullptr));
+
+    for (int i=0; i<n; i++) {
+        for (int j = 0; j < n; j++) {
+            arrInt[i][j] = rand() % 100;
+        }
+    }
+    
+    for (int i=0; i<n; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << setw(5) << arrInt[i][j] << " ";
+        }
+        cout << "\n";
+    }
+    
+    int col1 = 0, col2 = 0;
+    cout << "\ningrese la columna origen:";
+    cin >> col1;
+    cout << "\ningrese la columna destino:";
+    cin >> col2;
+    
+    int colcopy[n]; 
+    for (int i=0; i<n; i++)
+        colcopy[i] = arrInt[i][col1];
+    
+    for (int i=0; i<n; i++){
+        arrInt[i][col1] = arrInt[i][col2];
+        arrInt[i][col2] = colcopy[i];
+    }
+  
+    for (int i=0; i<n; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << setw(5) << arrInt[i][j] << " ";
+        }
+        cout << "\n";
+    }
+}
+---------------------------------------------------------------------------------------------------
+mayor de la diagonal:
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+void sumafila(int a[][100], int n, int sumas[]);
+
+int main() {
+    int n;
+
+    cin >> n;
+
+    int arrInt[n][100];
+
+    srand(time(nullptr));
+
+    for (int i=0; i<n; i++) {
+        for (int j = 0; j < n; j++) {
+            arrInt[i][j] = rand() % 100;
+        }
+    }
+
+    for (int i=0; i<n; i++) {
+        for (int j = 0; j < n; j++) {
+            cout << setw(5) << arrInt[i][j] << " ";
+        }
+        cout << "\n";
+    }
+    
+    // el mayor valor de la diagonal
+    int x = arrInt[0][0];
+    for (int w=0; w<n; w++)
+      if (arrInt[w][w] > x)
+        x = arrInt[w][w];
+    cout << "el mayor valor de la diagonal es:" << x;
+
+    
+
+    return 0;
+}
+
+
+void sumafila(int a[][100], int n, int sumas[]){
+    
+    for (int i=0; i<n; i++){
+      int suma = 0;
+      for (int j=0; j<n; j++)
+        suma += a[i][j]; 
+      sumas[i] = suma;
+    }    
+}
+------------------------------------------------------------------------------------------
+hack de hoy:
+https://www.hackerrank.com/contests/hr2-b/challenges
