@@ -1,0 +1,55 @@
+# c++ 3
+https://repl.it/@jorgeluisluis3 
+https://github.com/utec-cs1100/cpp-2
+---------------------------------------------------------------------------
+26/10/18 viernes tema: archivos
+--------------------------------------------------------------------------
+ejemplo: archivos
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main() {
+  int x;
+  fstream myfile("demo1.txt", ios::in);
+
+  while (!myfile.fail()) {
+    cout << x;
+    myfile >> x;
+  }
+
+}
+---------------------------------------------------------------------------------
+ejemplo de lab 09 archivos
+escribe un programa que solicite un txto en forma de cadena 
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main() {
+  string s;
+  fstream myfile("datos.txt", ios::out);
+  cin >> s;
+  while (s != ".") {
+    myfile << s;
+    cout << x << "\n";
+    myfile >> x;
+  }
+
+}
+-------------------------------------------------------------------
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main() {
+  string s;
+  fstream myfile("datos.txt", ios::out);
+  cout << "\ningrese la palabra:";
+  cin >> s;
+  while (s != ".") {
+    myfile << s << "\n";
+      cout << "\ningrese la palabra:";
+    cin >> s;  
+  }
+  myfile.close();
+}
