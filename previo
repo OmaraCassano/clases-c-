@@ -1,4 +1,7 @@
-#include <iostream> //en proceso, cambiar letra de may a min y poner . antes de consonates
+https://repl.it/@jorgeluisluis3 
+https://github.com/utec-cs1100/cpp-2
+
+#include <iostream> //en proceso, cambiar letra de may a min y poner . antes de consonates     
 #include <string>
 
 using namespace std;
