@@ -1,0 +1,26 @@
+#include <iostream> //en proceso, cambiar letra de may a min y poner . antes de consonates
+#include <string>
+
+using namespace std;
+
+int main()
+{
+  string c, p;
+  cin>>c;
+  if ( c.length() >= 1 && c.length() <= 100) //bien 
+  {
+    for ( char & cc : c) //para cada caracter en la cadena,cambiar eso
+    {
+        if (cc >= 65 && cc <= 90 ) //pasando de mayusculas a minusculas gracias a los caracteres de ascii
+        {
+          c += 32;  
+        }
+        if (cc != "a" && cc != "e" && cc != "i" && cc != "o" && cc != "u" && cc != "y" )
+        {
+            p.append(1,'.');
+            p.append(1,c);
+        }
+    }
+  }
+  cout<<p<<endl;
+}
