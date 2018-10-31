@@ -45,4 +45,151 @@ class CObjeto {
     void setDato2(string _dato2);
     string getDato2();
 };
---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------
+ejemplo 2
+Usando la clase de ejemplo en el link de arriba. Construya una clase Alumno que tenga los siguientes datos:
+Nombre, Apellido, Edad, Direccion.
+Cree las funciones: 
+para Agregar Nombre, Apellido, Edad y Dirección.
+para Imprimir nombres y Dirección del alumno.
+
+https://www.xataka.com/fotografia-y-video/estas-19-increibles-imagenes-ganadoras-concurso-fotografia-astronomia-2018
+
+main.cpp-----------------------------------------------
+#include <iostream>
+#include "CAlumno.h"
+#include "CAula.h"
+
+#ifndef TIPOS
+#define TIPOS
+#include "Tipos.h"
+#endif
+int main() {
+
+  CAlumno alumno1;
+  alumno1.setNombre("Luisito");
+
+  Color col = azul;
+  Aprendizaje apr = directo;
+  Lenguaje lg = basico;
+  alumno1.setDatos(col, apr, lg);
+  CAula aula("aula101");
+}
+
+CAlumno.cpp-----------------------------------------------------------------------
+#include "CAlumno.h"
+#ifndef TIPOS
+#define TIPOS
+#include "Tipos.h"
+#endif
+
+
+CAlumno::CAlumno(Color _color, Aprendizaje _aprd, Lenguaje _lang){
+     this->color = _color;
+     this->aprd = _aprd;
+     this->lang = _lang;
+  }
+
+void CAlumno::setNombre(string _nombre){
+
+    this->nombre = _nombre;
+};
+
+  void CAlumno::setDatos(Color _color, Aprendizaje _aprd, Lenguaje _lang){
+    //TODO
+     this->color = _color;
+     this->aprd = _aprd;
+     this->lang = _lang;
+  };
+
+CAlumno.h---------------------------------------------------------------------------
+#include <iostream>
+#ifndef TIPOS
+#define TIPOS
+#include "Tipos.h"
+#endif
+
+
+using namespace std;
+
+class CAlumno {
+
+private:
+  string nombre;
+  Color color;
+  Aprendizaje aprd;
+  Lenguaje lang;
+
+public:
+  CAlumno(){};
+  CAlumno(Color _color, Aprendizaje _aprd, Lenguaje _lang);
+  void setNombre(string _nombre);
+  void setDatos(Color _color, Aprendizaje _aprd, Lenguaje _lang);
+};
+
+CAula.cpp-------------------------------------------------------------------------------
+
+    #include "CAula.h"
+    using namespace std;
+    
+    CAula::CAula(string _name){
+      this->name = _name;
+      totalColor = new int[3];
+      totalAprd = new int[3];
+      totalLang = new int[3];
+
+    }
+
+    CAula::~CAula(){
+      delete [] totalColor;
+      delete [] totalAprd;
+      delete [] totalLang;
+    }
+    void CAula::setColor(int pos, int cont){
+      this->totalColor[pos] = cont;
+    }
+    void CAula::setAprd(int pos, int aprd){
+      //ToDo
+    }
+    void CAula::setLang(int pos, int lang){
+      //ToDo
+    } 
+
+CAula.h------------------------------------------------------------------------------------
+
+#include <iostream>
+
+using namespace std;
+
+class CAula {
+
+  private:
+    string name;
+    int *totalColor;
+    int *totalAprd;
+    int *totalLang;    
+  public:
+    CAula(string _name);
+    ~CAula();
+    void setColor(int pos, int cont);
+    void setAprd(int pos, int aprd);
+    void setLang(int pos, int lang);  
+};
+
+Tipos.h-------------------------------------------------------------------------------
+
+enum Color { azul, amarillo, rojo };
+
+enum Aprendizaje { directo, comunitario, expresivo };
+
+enum Lenguaje { basico, promedio, complejo };
+
+-------------------------------------------------
+Temas para hack del mier 7 nov: punteros y objetos
+
+
+
+
+
+
+
