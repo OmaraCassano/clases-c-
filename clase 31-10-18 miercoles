@@ -1,0 +1,48 @@
+ 31/10/18 miercoles orientado a objetos POO1 - Clase, objeto, Metodos de acceso y contructores = http://bit.ly/2CXQ8mx
+-------------------------------------------------------------------------------------------------------------------------
+ejemplo 1 base para crear objetos y clases
+https://repl.it/repls/LawfulBabyishQuadrant
+main.cpp---------------------------
+#include <iostream>
+#include "CObjeto.h"
+int main() {
+  CObjeto obj;
+
+  obj.setDato1(10);
+  obj.setDato2("Hola");
+  std::cout << "Hello World!\n";
+  std::cout << obj.getDato2();
+}
+
+CObjeto.cpp---------------------------
+#include <iostream>
+#include "CObjeto.h"
+
+#include  <iostream>
+using namespace std;
+
+void CObjeto::setDato1(int _dato1){
+  this->dato1 = _dato1; 
+}
+void CObjeto::setDato2(string _dato2){
+  this->dato2 = _dato2;
+}
+
+string CObjeto::getDato2(){
+  return this->dato2;
+} 
+
+CObjeto.h--------------------------------
+#include <iostream>
+using namespace std;
+
+class CObjeto {
+  private:
+    int dato1;
+    string dato2;
+  public:  
+    void setDato1(int _dato1);
+    void setDato2(string _dato2);
+    string getDato2();
+};
+--------------------------------------------------------------------------------------------------
