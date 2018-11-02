@@ -1,0 +1,144 @@
+captiulo 8: http://bit.ly/2CXQ8mx
+------------------------------------------------------------------------------------------
+#include <iostream>
+
+class Elemento {
+private:  
+  int valor;
+  Elemento* izq;
+  Elemento* der;
+public:
+  Elemento(int _valor);
+  void add(int _valor);
+  void show();
+};
+
+Elemento::Elemento(int _valor){
+  valor = _valor;
+  izq = nullptr;
+  der = nullptr;
+}
+
+void Elemento::add(int _valor){
+  Elemento newlista(_valor);
+  if (_valor > valor){
+    Elemento *ptr = &newlista;
+    izq = ptr;
+  }
+  else if (_valor <= valor) {
+    Elemento *ptr = &newlista;
+    der = ptr;
+  }
+}
+
+void Elemento::show(){
+  
+}
+
+int main() {
+  std::cout << "Hello World!\n";
+}
+1er ejmplo a y b
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+void update(int *a,int *b) {
+      int i = *a;
+      int j = *b;   
+       *a = i+j;
+       *b = abs(i-j);
+
+
+}
+
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+    cin >> a >> b;
+    update(pa, pb);
+    cout << a <<" "<< b;
+
+    return 0;
+}
+------------------------------------------------------------------------------------------------
+2do ejemplo derivadas
+
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+class Derivada{
+private:
+  double x;
+  int r;
+
+public:
+  void setX(double _x) {x = _x;};
+  void setR(int _r) { r = _r;};
+  double derivar();
+
+};
+
+double Derivada::derivar(){
+  return r*pow(x, r-1);
+}
+
+int main() {
+  double x = 0;
+  int r=0;
+  Derivada f;
+  cin >> x >> r;
+  f.setX(x);
+  f.setR(r);
+  double res = f.derivar();
+  cout << fixed << setprecision(4) << res;
+
+-------------------------------------------------------------------------------------------------
+3er ejemplo: histograma
+
+#include <iostream>
+using namespace std;
+class Histograma{
+  private:
+    int n;
+    char c;
+    int arr[100];
+  public:
+    void addN(int _n) {n = _n;};
+    void addC(char _c) {c = _c;};
+    void addElemento(int pos, int ele);
+    void print(int n);
+};
+
+void Histograma::addElemento(int pos, int ele){
+  arr[pos] = ele;
+}
+
+void Histograma::print(int n){
+  for (int i=0; i<n; i++){
+    for (int j=0; j<arr[i]; j++){
+      cout << c;
+    };
+    cout << "\n";
+
+  }
+}
+
+int main() {
+  int n;
+  char c;
+  Histograma h;
+  cin >> n;
+  int ele = 0;
+  for (int i=0; i<n; i++){
+    cin >> ele;
+    h.addElemento(i, ele);
+  }
+  cin >> c;
+  h.addC(c);
+
+  h.print(n);
+}
