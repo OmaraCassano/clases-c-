@@ -1,0 +1,98 @@
+Ejemplo del profe : https://repl.it/@jorgeluisluis3/SufficientWatchfulTrapezoids
+#include <iostream>
+using namespace std;
+
+class CuerpoCeleste {
+  private:
+    string nombre;
+    double masa;
+    double gravedad;
+  public:
+    void print();
+};
+
+void CuerpoCeleste::print(){
+  cout << "print";
+
+}
+class Planeta: public CuerpoCeleste {
+  private:
+    string estrella;
+    double distanciasolar; 
+};
+
+class Asteroide: public CuerpoCeleste {
+  private:
+    double orbita;
+    string distribucion;
+};
+
+class Satelite: public CuerpoCeleste {
+  private:
+    Planeta planeta; 
+    double gravedadplanetaria; 
+};
+
+int main() {
+  std::cout << "Hello World!\n";
+}
+
+
+
+
+
+---------------------------------------------------------------------
+#include <iostream>
+using namespace std;
+
+class CuerpoCeleste {
+  private:
+    string nombre;
+    double masa;
+    double gravedad;
+  public:
+    void print();
+};
+
+void CuerpoCeleste::print(){
+  cout << "print";
+
+}
+class Planeta: public CuerpoCeleste {
+  private:
+    string estrella;
+    double distanciasolar; 
+};
+
+class Asteroide: public CuerpoCeleste {
+  private:
+    double orbita;
+    string distribucion;
+};
+
+class Satelite: public CuerpoCeleste {
+  private:
+    Planeta planeta; 
+    double gravedadplanetaria; 
+};
+
+class SistemaSolar{
+ private: 
+    CuerpoCeleste sistema[10];
+public:
+  void addCuerpo(int pos, CuerpoCeleste _p);
+};
+
+void SistemaSolar::addCuerpo(int pos, CuerpoCeleste _p){
+  sistema[pos] = _p;
+}
+
+int main() {
+  Planeta mercurio;
+  Planeta tierra;
+  Satelite luna;
+
+  SistemaSolar sistema;
+
+  sistema.addCuerpo(mercurio);
+}
